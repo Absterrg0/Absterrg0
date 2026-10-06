@@ -1,25 +1,16 @@
-<div align="center">
-  <img src="./assets/header.svg" alt="Parv Jain — full-stack developer, systems + interface" width="100%" />
-</div>
+### Hi, I'm Parv Jain
 
-<h3 align="center">I design the interface and build the system behind it.</h3>
+Full-stack developer from Bengaluru, India. I design the interface and build the system behind it — scalable backends, real-time data paths, and developer tools.
 
-<p align="center">
-  <a href="https://abstergo.fyi"><b>PORTFOLIO</b></a>
-  &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/parv-jain-82169b297">LINKEDIN</a>
-  &nbsp;·&nbsp;
-  <a href="https://x.com/notabbytwt">X</a>
-  &nbsp;·&nbsp;
-  <a href="mailto:parvj5212@gmail.com">EMAIL</a>
-</p>
+[portfolio](https://abstergo.fyi) · [linkedin](https://www.linkedin.com/in/parv-jain-82169b297) · [x](https://x.com/notabbytwt) · [email](mailto:parvj5212@gmail.com)
 
-Full-stack developer in Bengaluru building scalable backends, real-time data paths, and developer-first tools — most of what I ship starts as an experiment and ends as something people use end to end.
+### Stack
 
-<img src="./assets/capability.svg" alt="Capability — TypeScript, JavaScript, Python, Go, Rust, Solidity; React, Next.js, Tailwind, Motion, TanStack Query, Zustand; Node.js, NestJS, PostgreSQL, Redis, Prisma, REST; Solana, Anchor, Web3.js, smart contracts; Docker, AWS, Linux, GitHub Actions, Vercel" width="100%" />
+[![stack](https://skillicons.dev/icons?i=ts,js,py,go,rust,react,nextjs,tailwind,nodejs,nestjs,postgres,redis,prisma,docker,aws,vercel,git,linux)](https://skillicons.dev)
 
-<img src="./assets/numbers.svg" alt="Public activity — commits, pull requests, languages, and consistency drawn from the GitHub API" width="100%" />
+### Stats
 
-<sub>Public activity, drawn from the GitHub API. Refreshed weekly by <a href="https://github.com/Absterrg0/Absterrg0/blob/main/.github/workflows/numbers.yml">numbers.yml</a>.</sub>
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=Absterrg0&show_icons=true&hide_border=true&bg_color=transparent&title_color=0969da&icon_color=0969da&text_color=24292f" alt="GitHub stats" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Absterrg0&layout=compact&hide_border=true&bg_color=transparent&title_color=0969da&text_color=24292f" alt="Top languages" />
 
-<sub>Bengaluru · UTC +05:30 · Open to full-time, internships, and freelance — <a href="mailto:parvj5212@gmail.com">parvj5212@gmail.com</a></sub>
+<sub>Bengaluru · UTC +05:30 · open to full-time, internships, and freelance — <a href="mailto:parvj5212@gmail.com">parvj5212@gmail.com</a></sub>
