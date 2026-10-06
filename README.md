@@ -17,7 +17,6 @@
 </p>
 
 <p align="center">
-  <img height="195" src="https://github-readme-stats.vercel.app/api?username=Absterrg0&show_icons=true&include_all_commits=true&hide_border=true&bg_color=0d1117&title_color=bd5d42&text_color=c9d1d9&icon_color=bd5d42" alt="GitHub stats" />
   <img height="195" src="https://streak-stats.demolab.com?user=Absterrg0&hide_border=true&background=0d1117&stroke=21262d&ring=bd5d42&fire=e36f45&currStreakNum=e6edf3&currStreakLabel=8b949e&sideNums=c9d1d9&sideLabels=8b949e&dates=6e7681" alt="Contribution streak" />
 </p>
 
