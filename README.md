@@ -59,7 +59,7 @@ A zero-download-overhead runtime action that captures CPU, memory, duration, and
 </div>
 
 <div align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Absterrg0&bg_color=10140e&color=c9c0b5&line=bd5d42&point=e36f45&area=true&hide_border=true" alt="Contribution activity graph" />
+  <img width="700" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Absterrg0&theme=github_dark" alt="Contribution calendar" />
 </div>
 
 <div align="center">
