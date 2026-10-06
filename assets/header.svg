@@ -1,47 +1,8 @@
-<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Parv Jain — full-stack developer, systems and interface">
-  <defs>
-    <pattern id="pj-grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M48 0H0v48" stroke="#141b14" stroke-width="1" fill="none"/>
-    </pattern>
-    <radialGradient id="pj-glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#bd5d42" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#bd5d42" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-  <rect width="1200" height="300" fill="#0c100d"/>
-  <rect width="1200" height="300" fill="url(#pj-grid)"/>
-  <ellipse cx="1020" cy="80" rx="340" ry="200" fill="url(#pj-glow)"/>
-
-  <g stroke="#1e271e" stroke-width="1.5" fill="none">
-    <path d="M940 70 1060 50"/>
-    <path d="M940 70 1020 125"/>
-    <path d="M1060 50 1110 105"/>
-    <path d="M1020 125 1110 105"/>
-    <path d="M1020 125 990 195"/>
-    <path d="M1110 105 1085 205"/>
-    <path d="M990 195 1085 205"/>
-  </g>
-  <g>
-    <circle cx="940" cy="70" r="3.5" fill="#334033"/>
-    <circle cx="1060" cy="50" r="3" fill="#eee7dc" fill-opacity="0.75"/>
-    <circle cx="1020" cy="125" r="5" fill="#bd5d42"/>
-    <circle cx="1110" cy="105" r="3.5" fill="#334033"/>
-    <circle cx="990" cy="195" r="3.5" fill="#334033"/>
-    <circle cx="1085" cy="205" r="3" fill="#b6ff4a"/>
-  </g>
-
-  <rect x="64" y="70" width="10" height="10" fill="#bd5d42"/>
-  <text x="86" y="79" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" letter-spacing="3.5" fill="#9da69c">ABSTERGO / PRODUCT SYSTEMS</text>
-
-  <text x="60" y="172" font-family="Georgia, 'Times New Roman', serif" font-size="76" letter-spacing="-1" fill="#eee7dc">Parv Jain</text>
-
-  <text x="64" y="212" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" letter-spacing="2.5" fill="#c9c0b5">FULL-STACK DEVELOPER — SYSTEMS + INTERFACE</text>
-
-  <text x="64" y="240" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.5" fill="#6d7568">Bengaluru, India · TypeScript / Solana / real-time / developer tools</text>
-
-  <rect x="64" y="266" width="72" height="2" fill="#bd5d42"/>
-  <circle cx="152" cy="267" r="3" fill="#b6ff4a"/>
-  <text x="163" y="271" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="2" fill="#7d8679">OPEN TO WORK</text>
-  <text x="1136" y="272" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="2.5" fill="#526052">SYS.PJ / 2026</text>
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img">
+<style>
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+  .serif { font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif; }
+  .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+</style>
+<defs><pattern id="g" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0v48" stroke="#131a13" stroke-width="1" fill="none"/></pattern><radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#bd5d42" stop-opacity="0.14"/><stop offset="1" stop-color="#bd5d42" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="300" fill="#0c100d"/><rect width="1200" height="300" fill="url(#g)" opacity="0.6"/><ellipse cx="1020" cy="80" rx="340" ry="200" fill="url(#glow)"/><g stroke="#1e271e" stroke-width="1.5" fill="none"><path d="M940 70 1060 50"/><path d="M940 70 1020 125"/><path d="M1060 50 1110 105"/><path d="M1020 125 1110 105"/><path d="M1020 125 990 195"/><path d="M1110 105 1085 205"/><path d="M990 195 1085 205"/></g><circle cx="940" cy="70" r="3.5" fill="#334033"/><circle cx="1060" cy="50" r="3" fill="#eee7dc" fill-opacity="0.75"/><circle cx="1020" cy="125" r="5" fill="#bd5d42"><animate attributeName="opacity" values="1;0.55;1" dur="3.6s" repeatCount="indefinite"/></circle><circle cx="1110" cy="105" r="3.5" fill="#334033"/><circle cx="990" cy="195" r="3.5" fill="#334033"/><circle cx="1085" cy="205" r="3" fill="#b6ff4a"><animate attributeName="opacity" values="1;0.5;1" dur="3.6s" begin="1.2s" repeatCount="indefinite"/></circle><rect x="64" y="70" width="10" height="10" fill="#bd5d42"/><text x="86" y="79" class="mono" font-size="12.5" letter-spacing="3.5" fill="#8b948a">ABSTERGO / PRODUCT SYSTEMS</text><text x="60" y="174" class="serif" font-size="80" letter-spacing="-1.5" fill="#eee7dc">Parv Jain</text><text x="64" y="214" class="mono" font-size="15" letter-spacing="2.5" fill="#c9c0b5">FULL-STACK DEVELOPER — SYSTEMS + INTERFACE</text><text x="64" y="242" class="mono" font-size="12" letter-spacing="1.5" fill="#6d7568">Bengaluru · 12.97°N / 77.59°E · TypeScript / Solana / real-time / dev tools</text><rect x="64" y="266" width="72" height="2" fill="#bd5d42"/><circle cx="152" cy="267" r="3" fill="#b6ff4a"/><text x="163" y="271" class="mono" font-size="10.5" letter-spacing="2" fill="#8b948a">OPEN TO WORK</text><text x="1136" y="272" class="mono" font-size="11" letter-spacing="2.5" fill="#526052" text-anchor="end">SYS.PJ / MMXXVI</text>
 </svg>
