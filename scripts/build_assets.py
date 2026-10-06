@@ -8,7 +8,8 @@ profile stays current without any third-party widgets.
 
 Usage:
     GITHUB_TOKEN=... python3 scripts/build_assets.py            # everything
-    GITHUB_TOKEN=... python3 scripts/build_assets.py --numbers  # only the panel
+    GITHUB_TOKEN=... python3 scripts/build_assets.py --static   # banner + capability
+    GITHUB_TOKEN=... python3 scripts/build_assets.py --numbers  # only the record
 """
 
 from __future__ import annotations
@@ -53,86 +54,13 @@ def esc(text: str) -> str:
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def wrap_balanced(text: str, max_width: int = 84) -> list[str]:
-    """Wrap into two visually balanced lines instead of a ragged orphan."""
-    if len(text) <= max_width:
-        return [text]
-    target = len(text) // 2
-    spaces = [i for i, ch in enumerate(text) if ch == " "]
-    if not spaces:
-        return [text]
-    best = min(spaces, key=lambda i: abs(i - target))
-    return [text[:best], text[best + 1 :]]
-
-
 # ---------------------------------------------------------------- data
-SYSTEMS = [
-    dict(
-        idx="01",
-        name="Okito",
-        kicker="PAYMENT INFRASTRUCTURE",
-        desc="A type-safe SDK and drop-in React components for Solana payments, airdrops, and NFTs.",
-        stack="TypeScript · Solana · SDK · React",
-        domain="okito.dev",
-        status="LIVE",
-        dot=LIME,
-        href="https://github.com/Absterrg0/Okito",
-    ),
-    dict(
-        idx="02",
-        name="Droplert",
-        kicker="CAMPAIGN INFRASTRUCTURE",
-        desc="Durable in-product campaigns served from PostgreSQL as a versioned, cacheable feed — no WebSockets, no browser secrets.",
-        stack="TypeScript · PostgreSQL · Prisma · npm",
-        domain="droplert.abstergo.dev",
-        status="LIVE",
-        dot=LIME,
-        href="https://github.com/Absterrg0/Alertify",
-    ),
-    dict(
-        idx="03",
-        name="Circe",
-        kicker="AGENT CONTROL PLANE",
-        desc="A voice-first control plane for coding agents — spoken requests land on the right machine, project, and harness.",
-        stack="TypeScript · Electron · T3 Code",
-        domain="heycirce.com",
-        status="PROTOTYPE",
-        dot=CREAM,
-        href="https://github.com/Absterrg0/circe",
-    ),
-    dict(
-        idx="04",
-        name="JustDraw",
-        kicker="TECHNICAL SKETCHBOOK",
-        desc="A local-first sketchbook — hand-drawn architecture, flows, and diagrams as a serializable SVG scene.",
-        stack="React · TypeScript · SVG · Rough.js",
-        domain="justdraw.abstergo.dev",
-        status="LIVE",
-        dot=LIME,
-        href="https://github.com/Absterrg0/JustDraw",
-    ),
-    dict(
-        idx="05",
-        name="DecentraWork",
-        kicker="WEB3 MARKETPLACE",
-        desc="A Solana-powered freelance marketplace with escrow-backed smart-contract payments.",
-        stack="Solana · React · TypeScript · Contracts",
-        domain="decentrawork.abstergo.dev",
-        status="LIVE",
-        dot=LIME,
-        href="https://github.com/Absterrg0/DecentraWork",
-    ),
-    dict(
-        idx="06",
-        name="ExecForge",
-        kicker="CI TELEMETRY",
-        desc="Zero-overhead CI telemetry for GitHub Actions — CPU, memory, duration, and outcome in one dashboard.",
-        stack="TypeScript · GitHub Actions · Telemetry",
-        domain="github.com/Absterrg0/execforge-runtime",
-        status="OPEN SOURCE",
-        dot=CLAY,
-        href="https://github.com/Absterrg0/execforge-runtime",
-    ),
+CAPABILITY = [
+    ("LANGUAGES", ["TypeScript", "JavaScript", "Python", "Go", "Rust", "Solidity"]),
+    ("INTERFACE", ["React", "Next.js", "Tailwind", "Motion", "TanStack Query", "Zustand"]),
+    ("SYSTEMS", ["Node.js", "NestJS", "PostgreSQL", "Redis", "Prisma", "REST"]),
+    ("PROTOCOL", ["Solana", "Anchor", "Web3.js", "Smart contracts"]),
+    ("DELIVERY", ["Docker", "AWS", "Linux", "GitHub Actions", "Vercel"]),
 ]
 
 
@@ -215,32 +143,32 @@ def render_header() -> None:
 
 
 # ---------------------------------------------------------------- cards
-def render_card(system: dict) -> None:
-    w, h = 1200, 168
-    lines = wrap_balanced(system["desc"])[:2]
-    desc_y = (68, 92) if len(lines) == 2 else (80,)
-    desc = "".join(
-        f'<text x="416" y="{y}" class="sans" font-size="15" fill="{BODY}">{esc(line)}</text>'
-        for y, line in zip(desc_y, lines)
+def render_capability() -> None:
+    w = 1200
+    row_h = 44
+    top = 96
+    h = top + row_h * (len(CAPABILITY) - 1) + 48
+    body = panel_base(w, h)
+    body += (
+        f'<text x="44" y="46" class="mono" font-size="11.5" letter-spacing="3" fill="{MUTED}">'
+        f"CAPABILITY · WHAT I BUILD WITH</text>"
     )
-    status = (
-        f'<text x="1156" y="46" class="mono" font-size="11" letter-spacing="2" text-anchor="end">'
-        f'<tspan fill="{system["dot"]}">●</tspan>'
-        f'<tspan fill="{MUTED}" dx="7">{esc(system["status"])}</tspan></text>'
-    )
-    body = (
-        panel_base(w, h)
-        + f'<text x="44" y="46" class="mono" font-size="11.5" letter-spacing="2.8" fill="{MUTED}">'
-        f'SYS.{system["idx"]} · {esc(system["kicker"])}</text>'
-        + f'<text x="42" y="118" class="serif" font-size="42" fill="{CREAM}">{esc(system["name"])}</text>'
-        + f'<text x="44" y="142" class="mono" font-size="11.5" fill="{FAINT}">{esc(system["domain"])}</text>'
-        + f'<line x1="380" y1="32" x2="380" y2="136" stroke="#182018" stroke-width="1"/>'
-        + desc
-        + f'<text x="416" y="128" class="mono" font-size="12" fill="{FAINT}">{esc(system["stack"])}</text>'
-        + status
-        + f'<text x="1156" y="142" class="mono" font-size="11.5" letter-spacing="1.5" fill="{CLAY}" text-anchor="end">SOURCE ↗</text>'
-    )
-    write(f'sys-{system["idx"]}.svg', svg_doc(w, h, body))
+    for i, (label, items) in enumerate(CAPABILITY):
+        cy = top + i * row_h
+        body += f'<circle cx="48" cy="{cy}" r="3" fill="{CLAY}"/>'
+        body += (
+            f'<text x="62" y="{cy + 4}" class="mono" font-size="11" letter-spacing="2.5" fill="{MUTED}">'
+            f"{label}</text>"
+        )
+        x = 220
+        for item in items:
+            chip_w = int(len(item) * 7.6) + 28
+            body += (
+                f'<rect x="{x}" y="{cy - 15}" width="{chip_w}" height="30" rx="15" fill="#141b14" stroke="#242e24"/>'
+                f'<text x="{x + 14}" y="{cy + 4.5}" class="mono" font-size="12.5" fill="#d5cfc4">{esc(item)}</text>'
+            )
+            x += chip_w + 10
+    write("capability.svg", svg_doc(w, h, body))
 
 
 # ---------------------------------------------------------------- numbers
@@ -420,13 +348,13 @@ def render_numbers(data: dict) -> None:
 
 # ---------------------------------------------------------------- main
 def main() -> None:
-    only_numbers = "--numbers" in sys.argv
-    if not only_numbers:
+    mode = sys.argv[1] if len(sys.argv) > 1 else "--all"
+    if mode in ("--all", "--static"):
         render_header()
-        for system in SYSTEMS:
-            render_card(system)
-    data = collect()
-    render_numbers(data)
+        render_capability()
+    if mode in ("--all", "--numbers"):
+        data = collect()
+        render_numbers(data)
 
 
 if __name__ == "__main__":
